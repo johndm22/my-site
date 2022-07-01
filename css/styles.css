@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", "Geneva", Verdana, sans-serif;
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 66%;
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 1em;
+}
+
+nav a {
+    display: inline-block;
+    color: black;
+    padding-bottom: 3px;
+    position: relative;
+    text-decoration: none;
+}
+
+nav a.active-link::before {
+    background-color: blue;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+}
+
+nav a.nav-link::before {
+    background-color: green;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    transition: width 250ms ease-out;
+    width: 0;
+}
+
+nav a.nav-link:hover::before {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+main section {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 66%;
+    padding-top: 3em;
+}
+
+main section h1 {
+    background-color: black;
+    border-radius: 85% 15% 81% 19% / 18% 78% 22% 82%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    transition: 350ms ease;
+    width: fit-content;
+}
+
+main section h1:hover {
+    background-image: linear-gradient(to right, blue, green);
+    border-radius: 90% 10% 73% 27% / 26% 58% 42% 74%;
+    cursor: pointer;
+}
+
+.dashed-bottom-border {
+    border-bottom: 2px dashed lightgray;
+}
+
+.dashed-underline {
+    border-bottom: 1px solid gray;
+}
+
+.margin-left-auto {
+    margin-left: auto;
+}
+
+.solid-bottom-border {
+    border-bottom: 2px solid lightgray;
+}
+
+.solid-underline {
+    border-bottom: 1px solid gray;
+}
